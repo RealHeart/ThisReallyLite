@@ -1,0 +1,50 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/info_header">
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="status"
+            app:summary="@string/not_active_title"
+            app:title="@string/status_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/settings_header">
+
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="remove_splash_ad"
+            app:title="@string/remove_splash_ad_title" />
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="remove_info_ad"
+            app:title="@string/remove_info_ad_title" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/about_header">
+        <Preference
+            app:iconSpaceReserved="false"
+            app:key="version"
+            app:title="@string/version" />
+        <PreferenceScreen
+            app:iconSpaceReserved="false"
+            app:key="github"
+            app:summary="RealHeart/ThisReallyLite"
+            app:title="GitHub">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/RealHeart/ThisReallyLite" />
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

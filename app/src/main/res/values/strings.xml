@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">这真轻享</string>
+    <string name="xposed_description">微博轻享版/极速版 去广告</string>
+
+    <!-- 信息 -->
+    <string name="info_header">信息</string>
+    <string name="status_title">状态</string>
+    <string name="not_active_title">未激活</string>
+    <string name="active_title">已激活</string>
+
+    <!-- 设置 -->
+    <string name="settings_header">功能</string>
+    <string name="remove_splash_ad_title">移除开屏广告</string>
+    <string name="remove_info_ad_title">移除信息流广告</string>
+
+    <!-- 关于 -->
+    <string name="about_header">关于</string>
+    <string name="version">模块版本</string>
+</resources>
