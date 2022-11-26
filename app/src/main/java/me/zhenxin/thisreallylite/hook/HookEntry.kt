@@ -1,8 +1,10 @@
 package me.zhenxin.thisreallylite.hook
 
 import com.highcapable.yukihookapi.annotation.xposed.InjectYukiHookWithXposed
+import com.highcapable.yukihookapi.hook.factory.configs
 import com.highcapable.yukihookapi.hook.factory.encase
 import com.highcapable.yukihookapi.hook.xposed.proxy.IYukiHookXposedInit
+import me.zhenxin.thisreallylite.BuildConfig
 import me.zhenxin.thisreallylite.hook.entity.WeiboHooker
 
 /**
@@ -14,6 +16,12 @@ import me.zhenxin.thisreallylite.hook.entity.WeiboHooker
  */
 @InjectYukiHookWithXposed(isUsingResourcesHook = false)
 class HookEntry : IYukiHookXposedInit {
+
+    override fun onInit() = configs {
+        debugLog { tag = "ThisReallyLite" }
+        isDebug = BuildConfig.DEBUG
+        isEnableDataChannel = false
+    }
 
     override fun onHook() = encase {
         // 微博轻享版

@@ -17,7 +17,7 @@
 本项目使用 [GPL-3.0](LICENSE) 协议开放源代码
 
 ```text
-ZMusic - Powerful Music System
+ThisReallyLite
 Copyright (C) 2022 RealHeart
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -35,5 +35,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 * [LSPosed](https://github.com/LSPosed/LSPosed)
 * [YukiHookAPI](https://github.com/fankes/YukiHookAPI)
+* [RemoveAdsPlugin](https://github.com/chenyue404/RemoveAdsPlugin)
 
 [banner]: https://socialify.git.ci/RealHeart/ThisReallyLite/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light
