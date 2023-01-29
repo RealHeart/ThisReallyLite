@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("com.google.devtools.ksp") version "1.7.21-1.0.8"
+    id("com.google.devtools.ksp") version "1.8.0-1.0.9"
 }
 
 android {
@@ -12,8 +12,8 @@ android {
         applicationId = "me.zhenxin.thisreallylite"
         minSdk = 21
         targetSdk = 33
-        versionCode = 2211261
-        versionName = "1.0.1"
+        versionCode = 2301290
+        versionName = "1.1.0"
     }
 
     buildTypes {
@@ -38,12 +38,12 @@ android {
 }
 
 dependencies {
-    implementation("com.highcapable.yukihookapi:api:1.1.4")
+    implementation("com.highcapable.yukihookapi:api:1.1.6")
     compileOnly("de.robv.android.xposed:api:82")
-    ksp("com.highcapable.yukihookapi:ksp-xposed:1.1.4")
+    ksp("com.highcapable.yukihookapi:ksp-xposed:1.1.6")
 
     implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.4.2")
+    implementation("androidx.appcompat:appcompat:1.6.0")
     implementation("androidx.preference:preference:1.2.0")
-    implementation("com.google.android.material:material:1.6.1")
+    implementation("com.google.android.material:material:1.8.0")
 }

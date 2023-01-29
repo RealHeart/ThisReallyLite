@@ -1,8 +1,11 @@
 package me.zhenxin.thisreallylite.hook.entity
 
 import com.highcapable.yukihookapi.hook.entity.YukiBaseHooker
+import com.highcapable.yukihookapi.hook.type.android.ActivityClass
+import com.highcapable.yukihookapi.hook.type.java.BooleanClass
+import com.highcapable.yukihookapi.hook.type.java.LongClass
 import com.highcapable.yukihookapi.hook.type.java.MapClass
-import com.highcapable.yukihookapi.hook.type.java.StringType
+import com.highcapable.yukihookapi.hook.type.java.StringClass
 
 /**
  *
@@ -30,6 +33,15 @@ object WeiboHooker : YukiBaseHooker() {
                     }
                 }
             }
+            injectMember {
+                method {
+                    name = "triggerPermission"
+                    param(BooleanClass)
+                }
+                replaceAny {
+                    return@replaceAny true
+                }
+            }
         }
 
         // 去除信息流广告
@@ -45,12 +57,51 @@ object WeiboHooker : YukiBaseHooker() {
             }
         }
 
+        // Utility
+        "$pkgName.utility.KotlinExtendKt".hook {
+            injectMember {
+                method {
+                    name = "isWeiboUVEAd"
+                    param(findClass("$pkgName.model.sina.Status"))
+                }
+                beforeHook {
+                    result = false
+                }
+            }
+        }
+        "$pkgName.utility.KotlinUtilKt".hook {
+            injectMember {
+                method {
+                    name = "findUVEAd"
+                    param(findClass("$pkgName.model.sina.PageInfo"))
+                }
+                beforeHook {
+                    result = null
+                }
+            }
+        }
+
+        // ProcessMonitor
+        "$pkgName.manager.ProcessMonitor".hook {
+            injectMember {
+                method {
+                    name = "displayAd"
+                    param(LongClass)
+                    param(ActivityClass)
+                    param(BooleanClass)
+                }
+                replaceAny {
+                    return@replaceAny true
+                }
+            }
+        }
+
         // 其他广告
         "$pkgName.activity.v4.Setting".hook {
             injectMember {
                 method {
                     name = "loadBoolean"
-                    param(StringType)
+                    param(StringClass)
                 }
                 beforeHook {
                     val key = args[0] as String
@@ -63,7 +114,7 @@ object WeiboHooker : YukiBaseHooker() {
             injectMember {
                 method {
                     name = "loadInt"
-                    param(StringType)
+                    param(StringClass)
                 }
                 beforeHook {
                     when (args[0] as String) {
@@ -75,7 +126,7 @@ object WeiboHooker : YukiBaseHooker() {
             injectMember {
                 method {
                     name = "loadStringSet"
-                    param(StringType)
+                    param(StringClass)
                 }
                 beforeHook {
                     if (args[0] as String == "CYT_DAYS") {
@@ -86,7 +137,7 @@ object WeiboHooker : YukiBaseHooker() {
             injectMember {
                 method {
                     name = "loadString"
-                    param(StringType)
+                    param(StringClass)
                 }
                 beforeHook {
                     if (args[0] as String == "video_ad") {

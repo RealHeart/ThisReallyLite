@@ -21,7 +21,7 @@ ThisReallyLite
 Copyright (C) 2022 RealHeart
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
+the Free Software Foundation, either version 3 of the License, orB
 (at your option) any later version.
 This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -37,4 +37,4 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * [YukiHookAPI](https://github.com/fankes/YukiHookAPI)
 * [RemoveAdsPlugin](https://github.com/chenyue404/RemoveAdsPlugin)
 
-[banner]: https://socialify.git.ci/RealHeart/ThisReallyLite/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light
+[banner]: https://socialify.git.ci/RealHeart/ThisReallyLite/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Auto
