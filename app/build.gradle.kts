@@ -38,12 +38,12 @@ android {
 }
 
 dependencies {
-    implementation("com.highcapable.yukihookapi:api:1.1.6")
+    implementation("com.highcapable.yukihookapi:api:1.1.8")
     compileOnly("de.robv.android.xposed:api:82")
-    ksp("com.highcapable.yukihookapi:ksp-xposed:1.1.6")
+    ksp("com.highcapable.yukihookapi:ksp-xposed:1.1.8")
 
     implementation("androidx.core:core-ktx:1.9.0")
-    implementation("androidx.appcompat:appcompat:1.6.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.preference:preference:1.2.0")
     implementation("com.google.android.material:material:1.8.0")
 }
