@@ -12,8 +12,8 @@ android {
         applicationId = "me.zhenxin.thisreallylite"
         minSdk = 21
         targetSdk = 33
-        versionCode = 2301290
-        versionName = "1.1.0"
+        versionCode = 2303070
+        versionName = "1.2.0"
     }
 
     buildTypes {
