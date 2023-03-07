@@ -48,7 +48,16 @@ object WeiboHooker : YukiBaseHooker() {
         "$pkgName.api.RxApiKt".hook {
             injectMember {
                 method {
-                    name = "queryUveAdRequest\$lambda-178"
+                    name = "queryUveAdRequest\$lambda-172"
+                    param(MapClass)
+                }
+                beforeHook {
+                    result = ""
+                }
+            }
+            injectMember {
+                method {
+                    name = "queryUveAdRequest\$lambda-173"
                     param(MapClass)
                 }
                 beforeHook {
