@@ -7,5 +7,3 @@
 /captures
 .externalNativeBuild
 .cxx
-app/release
-app/debug
