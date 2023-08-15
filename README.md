@@ -4,7 +4,10 @@
 
 </div>
 
-### 由于没有时间维护项目，加上本人对安卓逆向了解的不深，此项目停止维护，如需接手可联系 qgzhenxin@qq.com
+### 说明
+
+由于没有时间维护项目，加上本人对安卓逆向了解的不深，此项目停止维护。   
+可使用 Fork 版本 [wangyuan0217/ThisReallyLite](https://github.com/wangyuan0217/ThisReallyLite)
  
 ## 简介
 
